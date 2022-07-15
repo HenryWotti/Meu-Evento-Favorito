@@ -1,0 +1,35 @@
+.footerContainer {
+  background-color: var(--blue-500);
+
+  margin-top: 5rem;
+
+  .footerContent {
+    margin-left: 10.5rem;
+    margin-right: 10.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerTitle {
+      font-family: "Magra";
+      color: var(--white);
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .footerSocials {
+      img {
+        width: 2rem;
+        margin-right: 2rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and(min-width:1200px) {}
