@@ -1,0 +1,23 @@
+.initialSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .sectionTitle {
+      h1 {
+        -webkit-text-stroke: 2px #565656;
+  
+        font-size: 117.76px;
+        font-family: "Magra";
+        line-height: 7rem;
+  
+        background: -webkit-radial-gradient(var(--yellow-600), var(--orange-50));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+  
+        span {
+          font-size: 150px;
+        }
+      }
+    }
+  }
