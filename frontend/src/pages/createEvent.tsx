@@ -6,7 +6,7 @@ export default function CreateEventPage() {
   return (
     <>
       <Head>
-        <title>CRIAR EVENTO</title>
+        <title>Criar Evento</title>
       </Head>
       
       <main>

@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Styles from "../styles/event.module.scss";
 
-export default function CreateEventPage() {
+export default function EditEventPage() {
   return (
     <>
       <Head>
