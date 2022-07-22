@@ -6,7 +6,7 @@ export default function CreateEventPage() {
   return (
     <>
       <Head>
-        <title>CRIAR EVENTO</title>
+        <title>Editar Evento</title>
       </Head>
       
       <main>
@@ -16,29 +16,12 @@ export default function CreateEventPage() {
                 <a target="_blank" href="" rel="noopener noreferrer">
                             <img src="./images/goBack.svg" alt="voltar" />
                 </a>
-                <h1 >CRIAÇÃO DE EVENTO</h1>
-            </section>
+                <h1 >EDIÇÃO DE EVENTO</h1>
+        </section>
 
             <section className={Styles.sectionForm}>
-                <div className={Styles.dotAndTitle}>
-                    <img src="./images/pontoAmarelo.svg" alt="ponto amarelo"/>
-                    <h2>Informações do criador do evento</h2>
-                </div>
+
             <form>
-                <div className={Styles.infoCreator}>
-                    <div className={Styles.labelAndInput}>
-                        <label>
-                            Nome<br/>
-                            <input className={Styles.inputMedium} type="text" placeholder="Nome"/>
-                        </label>
-                    </div>
-                    <div className={Styles.labelAndInput}>
-                        <label>
-                            E-mail<br/>
-                            <input className={Styles.inputMedium} type="email" placeholder="Seu e-mail favorito"/>
-                        </label>
-                    </div>
-                </div>
 
                 <div className={Styles.dotAndTitle}>
                     <img src="./images/pontoAmarelo.svg" alt="ponto amarelo"/>
@@ -119,7 +102,7 @@ export default function CreateEventPage() {
                 <div className={Styles.loadImage}>
                     <img src="./images/uparArquivo.svg" alt="carregar arquivo ícone"/>
                     <label className={Styles.labelAndInput}>
-                        Carregar foto do evento <br/>
+                        Editar foto do evento <br/>
                         <input type="file" />
                     </label>                    
                 </div>
@@ -132,7 +115,7 @@ export default function CreateEventPage() {
                         <img src="./images/trioMinions.png" alt="três minions"/>
                     </div>
                     <div>
-                        <input className={Styles.sendButton} type="submit" value="Enviar" />
+                        <input className={Styles.sendButton} type="submit" value="Salvar" />
                     </div>
                     
                 </div>
