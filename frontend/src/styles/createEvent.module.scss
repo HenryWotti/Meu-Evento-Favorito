@@ -1,5 +1,4 @@
 .initialSection {
-    //display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 4rem;
@@ -50,7 +49,6 @@
               }
         }
 
-        
         .infoCreator {
             display:inline;
             
@@ -60,15 +58,74 @@
             margin-bottom: 15px;
             margin-top: 15px;
         }
+
         .inputSmall{
+            width:212px;
+            height: 30px;
+
+            //-moz-box-sizing: border-box;
+            //box-sizing: border-box;
+            background-color: #E9E9E9;
+            border-color: #ffffff;
+            box-shadow: none;
+            border-radius: 10px;
+            border-inline-width: 0px;
+        }
+
+        .inputMedium{
             width:425px;
-            height: 20px;
+            height: 30px;
+
+            //-moz-box-sizing: border-box;
+            //box-sizing: border-box;
+            background-color: #E9E9E9;
+            border-color: #ffffff;
+            box-shadow: none;
+            border-radius: 10px;
+            border-inline-width: 0px;
+        }
+
+        .inputLarge{
+            width:425px;
+            height: 200px;
+
+            //-moz-box-sizing: border-box;
+            //box-sizing: border-box;
+            background-color: #E9E9E9;
+            border-color: #ffffff;
+            box-shadow: none;
+            border-radius: 10px;
+            border-inline-width: 0px;
         }
 
         h2 {
             font-size: 28.32px;
             font-family: "Montserrat";
             font-weight: 500;
+        }
+
+        .loadImage {
+            img{
+                height: 20px;
+                margin:  0 10px 0 10px;
+            }
+        }
+
+        .sendSection {
+            margin-top: 80px;
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .sendButton {
+            background-color: #FED848;
+            border-color: #FED848;
+            border-width: 1px;
+            padding: 12px 40px 12px 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight:700;
+            margin: 20px 30px 20px 0px;
         }
     }
   }
