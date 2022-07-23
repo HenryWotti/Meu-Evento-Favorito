@@ -1,18 +1,35 @@
 .initialImage {
-    display:flex;  
+    display: inline-block;
     align-items: center;
     justify-content: center;
+    align-content: center;
     
-    div {
-        display:flex;  
-    align-items: center;
-    justify-content: center;
+    .minionsImage { //queria mt centralizar!!!!!!!!!!!
+        //margin: -0px 100px 0 100px; 
+        display: flex;
         align-items: center;
+        justify-content: center;
+        align-content: center;
+    
     }
 
-    img {
-        
-        width: 70%;
+    .congratulations{
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        font-weight: 500;
     }
+
+    .backToHomePage{
+        background-color: #FED848;
+        border-color: #FED848;
+        border-width: 1px;
+        padding: 8px 140px 8px 140px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight:400;
+        //margin: 20px 30px 20px 0px;
+    }
+
    
   }

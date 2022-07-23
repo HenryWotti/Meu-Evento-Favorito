@@ -2,8 +2,6 @@ import Head from "next/head";
 
 import Styles from "../styles/home.module.scss";
 
-
-
 export default function IndexPage() {
   return (
     <>

@@ -132,7 +132,7 @@ export default function CreateEventPage() {
                         <img src="./images/trioMinions.png" alt="três minions"/>
                     </div>
                     <div>
-                        <input className={Styles.sendButton} type="submit" value="Enviar" />
+                        <input className={Styles.sendButton} name="sendCreationInfo" type="submit" value="Enviar" />
                     </div>
                     
                 </div>
