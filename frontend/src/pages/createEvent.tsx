@@ -24,7 +24,7 @@ export default function CreateEventPage() {
                     <img src="./images/pontoAmarelo.svg" alt="ponto amarelo"/>
                     <h2>Informações do criador do evento</h2>
                 </div>
-            <form>
+            <form action = "/editEvent" method="POST">
                 <div className={Styles.infoCreator}>
                     <div className={Styles.labelAndInput}>
                         <label>
