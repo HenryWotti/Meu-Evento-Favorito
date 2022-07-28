@@ -1,30 +1,31 @@
 .initialSection {
+    margin-top: 3rem;
     align-items: center;
     justify-content: center;
     margin-left: 4rem;
     margin-right: 4rem;
-  
+
     .sectionTitle {
         display: flex;
         -webkit-text-stroke: 2px #565656;
-  
+
         font-size: 82.32px;
         font-family: "Magra";
         line-height: 7rem;
-  
+
         background: -webkit-radial-gradient(var(--yellow-600), var(--orange-50));
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
 
-        margin-left: 3rem;  
+        margin-left: 3rem;
 
         img {
             margin-right: 2rem;
-            
+
             &:hover {
-              transform: scale(1.1);
+                transform: scale(1.1);
             }
-          }
+        }
     }
 
     .sectionForm {
@@ -39,6 +40,7 @@
             display: flex;
             margin-top: 2rem;
             margin-bottom: 2rem;
+
             img {
                 margin-right: 2rem;
                 /*
@@ -46,21 +48,35 @@
                   transform: scale(1.1);
                 }
                 */
-              }
+            }
         }
 
-        .infoCreator {
-            display:inline;
-            
-        }
-        
         .labelAndInput {
-            margin-bottom: 15px;
-            margin-top: 15px;
+
+            label {
+                font-family: "Montserrat";
+                font-size: 20px;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+
+            }
+
+            .checkboxes {
+                margin-bottom: 15px;
+                margin-top: 15px;
+
+                label {
+                    font-size: 16px;
+                }
+
+                legend {
+                    font-size: 20px;
+                }
+            }
         }
 
-        .inputSmall{
-            width:212px;
+        .inputSmall {
+            width: 212px;
             height: 30px;
 
             //-moz-box-sizing: border-box;
@@ -72,8 +88,8 @@
             border-inline-width: 0px;
         }
 
-        .inputMedium{
-            width:425px;
+        .inputMedium {
+            width: 425px;
             height: 30px;
 
             //-moz-box-sizing: border-box;
@@ -85,8 +101,8 @@
             border-inline-width: 0px;
         }
 
-        .inputLarge{
-            width:425px;
+        .inputLarge {
+            width: 425px;
             height: 200px;
 
             //-moz-box-sizing: border-box;
@@ -105,16 +121,20 @@
         }
 
         .loadImage {
-            img{
-                height: 20px;
-                margin:  0 10px 0 10px;
+            img {
+                height: 15px;
+                margin: 0 10px 0 10px;
+            }
+
+            label {
+                font-size: 20px;
             }
         }
 
         .sendSection {
             margin-top: 80px;
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
         }
 
         .sendButton {
@@ -124,8 +144,8 @@
             padding: 12px 40px 12px 40px;
             border-radius: 10px;
             font-size: 20px;
-            font-weight:700;
+            font-weight: 700;
             margin: 20px 30px 20px 0px;
         }
     }
-  }
+}

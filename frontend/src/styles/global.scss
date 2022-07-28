@@ -35,18 +35,8 @@ a {
   text-decoration: none;
 }
 
-main {
-  position: relative;
-  top: 3rem;
-}
-
 footer {
   position: relative;
-  top: 3rem;
 }
 
-@media screen and(min-width:1200px) {
-  main {
-    top: 7.125rem;
-  }
-}
+@media screen and(min-width:1200px) {}

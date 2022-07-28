@@ -1,35 +1,56 @@
-.initialImage {
-    display: inline-block;
+.container {
+    //display: inline-block;
     align-items: center;
     justify-content: center;
     align-content: center;
-    
-    .minionsImage { //queria mt centralizar!!!!!!!!!!!
-        //margin: -0px 100px 0 100px; 
+
+    .minionsImage {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .congratulations {
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0 0 0;
+
+        p {
+            font-size: 25px;
+            font-weight: 400;
+
+            span {
+                color: #054E96;
+                font-weight: 700;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .sadMinionImage {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 0 0 0;
+    }
+
+    .backToHomePage {
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
-    
+        margin: 5rem 0 0 0;
+
+        button {
+            background-color: #FED848;
+            border-color: #FED848;
+            border-width: 1px;
+            padding: 8px 140px 8px 140px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
     }
 
-    .congratulations{
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        font-weight: 500;
-    }
 
-    .backToHomePage{
-        background-color: #FED848;
-        border-color: #FED848;
-        border-width: 1px;
-        padding: 8px 140px 8px 140px;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight:400;
-        //margin: 20px 30px 20px 0px;
-    }
-
-   
-  }
+}

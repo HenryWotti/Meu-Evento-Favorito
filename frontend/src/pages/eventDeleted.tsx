@@ -8,23 +8,28 @@ export default function eventDeletedPage() {
       <Head>
         <title>Evento excluído</title>
       </Head>
-      
+
       <main>
-        <section className={Styles.initialImage}>
-            <div className={Styles.minionsImage}>
-                <img src="./images/Multidão de minions.png" alt="Multidão de minions" />
+        <section className={Styles.container}>
+          <div className={Styles.minionsImage}>
+            <img src="./images/Multidão de minions.png" alt="Multidão de minions" />
 
-            </div>
+          </div>
 
-            <div className={Styles.congratulations}>
-              <p> PARABÉNS SEU EVENTO <span>*nome do evento</span> FOI EXCLUÍDO COM SUCESSO </p>
-            </div>
+          <div className={Styles.congratulations}>
+            <p> PARABÉNS, SEU EVENTO <span>*nome do evento</span> FOI EXCLUÍDO COM SUCESSO </p>
+          </div>
 
-            <div >
-              <button type="button" className={Styles.backToHomePage}>VOLTAR PARA HOME PAGE</button>
-            </div>
+          <div className={Styles.sadMinionImage}>
+            <img src="./images/sadMinion.png" alt="Minion triste" />
+
+          </div>
+
+          <div className={Styles.backToHomePage}>
+            <button type="button">VOLTAR PARA HOME PAGE</button>
+          </div>
         </section>
-        
+
       </main>
 
     </>
