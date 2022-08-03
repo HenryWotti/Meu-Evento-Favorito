@@ -13,19 +13,23 @@
 
 class Event{
 
-    constructor(ownerName,ownerMail,name,description,maxPeople,minimumAge,beginDay,endDay,beginTime,endTime,place,targetAudience) {
-        this.ownerName = ownerName
-        this.ownerMail = ownerMail
-        this.name = name
-        this.description = description
-        this.maxPeople = maxPeople
-        this.minimumAge = minimumAge
-        this.beginDay = beginDay
-        this.endDay = endDay
-        this.beginTime = beginTime
-        this.endTime = endTime
-        this.place = place
-        this.targetAudience = targetAudience
+    constructor(obj) {
+        /*ownerName,ownerMail,name,description,maxPeople,minimumAge,beginDay,endDay,beginTime,endTime,place,targetAudience*/
+        obj = obj!=null?obj:{}
+        this.ownerName = obj.ownerName
+        this.ownerMail = obj.ownerMail
+        this.name = obj.name
+        this.description = obj.description
+        this.maxPeople = obj.maxPeople
+        this.minimumAge = obj.minimumAge
+        this.beginDay = obj.beginDay
+        this.endDay = obj.endDay
+        this.beginTime = obj.beginTime
+        this.endTime = obj.endTime
+        this.place = obj.place
+        this.targetAudience = obj.targetAudience
     }
 
 }
+
+module.exports = Event
