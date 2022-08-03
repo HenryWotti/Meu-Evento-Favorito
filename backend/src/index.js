@@ -1,16 +1,15 @@
 const express = require('express');
+const path = require('path')
+const router = require('./routes')
 
 const app = express();
 
 app.get("/", (req, res) =>{
-    res.sendFile(__dirname + "/frontend/src/createEvent.tsx");
+    res.sendFile(path.resolve('../../frontend/src/pages/createEvent.tsx'));
 });
 
 
-app.post("/editEvent", function(req, res){
-    console.log("oieeeee");
-    res.send("Formulário recebido my friend!");
-})
+
 
 
 app.listen(3000, function(){
