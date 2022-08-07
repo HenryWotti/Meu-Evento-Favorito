@@ -13,7 +13,7 @@ export default function CreateEventPage() {
                 <section className={Styles.initialSection}>
 
                     <section className={Styles.sectionTitle}>
-                        <a target="_blank" href="" rel="noopener noreferrer">
+                        <a href="/" rel="noopener noreferrer">
                             <img src="./images/goBack.svg" alt="voltar" />
                         </a>
                         <h1 >CRIAÇÃO DE EVENTO</h1>
