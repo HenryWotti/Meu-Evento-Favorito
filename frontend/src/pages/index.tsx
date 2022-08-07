@@ -43,7 +43,6 @@ export default function IndexPage() {
             return (
               <>
                 <div className={Styles.eventDisplay}>
-                  <img src={event.foto} alt="" />
                   <h1>{event.nomeEvento}</h1>
                 </div>
               </>
