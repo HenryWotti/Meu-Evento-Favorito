@@ -1,9 +1,26 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { db } from "../firebase-config";
+import { collection, getDocs } from 'firebase/firestore'
 
 import Styles from "../styles/home.module.scss";
 
 export default function IndexPage() {
+
+  const [events, setEvents] = useState([]);
+
+  const eventsCollectionRef = collection(db, "events")
+
+  useEffect(() => {
+    const getEvents = async () => {
+      const data = await getDocs(eventsCollectionRef)
+      setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+
+    getEvents();
+  }, [])
+
   return (
     <>
       <Head>
@@ -20,6 +37,19 @@ export default function IndexPage() {
           <div className={Styles.createEventButton}>
             <button><Link href='/createEvent'>Criar Evento</Link></button>
           </div>
+
+
+          {events.map((event) => {
+            return (
+              <>
+                <div className={Styles.eventDisplay}>
+                  <img src={event.foto} alt="" />
+                  <h1>{event.nomeEvento}</h1>
+                </div>
+              </>
+            );
+          })}
+
         </section>
 
 
