@@ -10,7 +10,7 @@ export default function IndexPage() {
 
   const [events, setEvents] = useState([]);
 
-  const eventsCollectionRef = collection(db, "events")
+  const eventsCollectionRef = collection(db, "events");
 
   useEffect(() => {
     const getEvents = async () => {
@@ -19,7 +19,7 @@ export default function IndexPage() {
     }
 
     getEvents();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -35,7 +35,9 @@ export default function IndexPage() {
         </section>
         <section className={Styles.eventSection}>
           <div className={Styles.createEventButton}>
-            <button><Link href='/createEvent'>Criar Evento</Link></button>
+            <Link href='/createEvent'>
+              <button>Criar Evento</button>
+            </Link>
           </div>
 
 
@@ -43,7 +45,10 @@ export default function IndexPage() {
             return (
               <>
                 <div className={Styles.eventDisplay}>
-                  <h1>{event.nomeEvento}</h1>
+                  <p>{event.nomeEvento}</p>
+                  <p>Data Início: {event.dataInicio}</p>
+                  <p>Horário: {event.horaInicio}</p>
+                  <p>Local: {event.local}</p>
                 </div>
               </>
             );

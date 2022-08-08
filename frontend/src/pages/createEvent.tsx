@@ -1,8 +1,44 @@
 import Head from "next/head";
-
+import Link from "next/link";
+import { useState } from "react";
+import { collection, addDoc } from 'firebase/firestore'
 import Styles from "../styles/event.module.scss";
+import { db } from "../firebase-config";
 
 export default function CreateEventPage() {
+    const [nomeCriador, setNomeCriador] = useState("");
+    const [emailCriador, setEmailCriador] = useState("");
+    const [nomeEvento, setNomeEvento] = useState("");
+    const [descricaoEvento, setDescricaoEvento] = useState("");
+    const [qtdMaxPessoas, setQtdMaxPessoas] = useState("");
+    const [publicoAlvo, setPublicoAlvo] = useState("");
+    const [idadeMin, setIdadeMin] = useState("");
+    const [dataInicio, setDataInicio] = useState("");
+    const [dataFim, setDataFim] = useState("");
+    const [horaInicio, setHoraInicio] = useState("");
+    const [horaFim, setHoraFim] = useState("");
+    const [local, setLocal] = useState("");
+    //const [foto, setFoto] = useState("");
+
+    const eventsCollectionRef = collection(db, "events");
+
+    const createEvent = async () => {
+        await addDoc(eventsCollectionRef, {
+            nomeCriador: nomeCriador,
+            emailCriador: emailCriador,
+            nomeEvento: nomeEvento,
+            descricaoEvento: descricaoEvento,
+            qtdMaxPessoas: qtdMaxPessoas,
+            publicoAlvo: publicoAlvo,
+            idadeMin: idadeMin,
+            dataInicio: dataInicio,
+            dataFim: dataFim,
+            horaInicio: horaInicio,
+            horaFim: horaFim,
+            local: local,
+        })
+    };
+
     return (
         <>
             <Head>
@@ -13,8 +49,11 @@ export default function CreateEventPage() {
                 <section className={Styles.initialSection}>
 
                     <section className={Styles.sectionTitle}>
-                        <a href="/" rel="noopener noreferrer">
-                            <img src="./images/goBack.svg" alt="voltar" />
+                        <a>
+                            <Link href='/'>
+                                <img src="./images/goBack.svg" alt="voltar" />
+                            </Link>
+
                         </a>
                         <h1 >CRIAÇÃO DE EVENTO</h1>
                     </section>
@@ -29,12 +68,20 @@ export default function CreateEventPage() {
                             <div className={Styles.labelAndInput}>
                                 <label>
                                     Nome<br />
-                                    <input className={Styles.inputMedium} type="text" />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                        onChange={(event) => { setNomeCriador(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
                                 <label>
                                     E-mail<br />
-                                    <input className={Styles.inputMedium} type="email" />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="email"
+                                        onChange={(event) => { setEmailCriador(event.target.value) }}
+                                    />
                                 </label>
                             </div>
 
@@ -47,58 +94,93 @@ export default function CreateEventPage() {
                             <div className={Styles.labelAndInput}>
                                 <label>
                                     Nome do evento<br />
-                                    <input className={Styles.inputMedium} type="text" />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                        onChange={(event) => { setNomeEvento(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
 
                                 <label>
                                     Descrição do evento<br />
-                                    <input className={Styles.inputLarge} type="text" />
+                                    <textarea
+                                        className={Styles.inputLarge}
+                                        onChange={(event) => { setDescricaoEvento(event.target.value) }}
+                                    ></textarea>
                                     <br />
                                 </label>
                                 <label>
                                     Quantidade máxima de pessoas<br />
-                                    <input className={Styles.inputSmall} type="number" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="number"
+                                        onChange={(event) => { setQtdMaxPessoas(event.target.value) }}
+                                    />
+                                    <br />
                                 </label>
-                                <div className={Styles.checkboxes}>
-                                    <legend>Público-alvo<br /></legend>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Homens
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Mulheres
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Crianças
-                                        </label>
-                                    </div>
-                                </div>
+                                <label>
+                                    Público Alvo<br />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                        onChange={(event) => { setPublicoAlvo(event.target.value) }}
+                                    />
+                                    <br />
+                                </label>
+
                                 <label>
                                     Idade mínima requerida<br />
-                                    <input className={Styles.inputSmall} type="number" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="number"
+                                        onChange={(event) => { setIdadeMin(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
                                 <label>
                                     Início do evento<br />
-                                    <input className={Styles.inputSmall} type="datetime-local" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="date"
+                                        onChange={(event) => { setDataInicio(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
                                 <label>
                                     Fim do evento <br />
-                                    <input className={Styles.inputSmall} type="datetime-local" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="date"
+                                        onChange={(event) => { setDataFim(event.target.value) }}
+                                    />
+                                    <br />
+                                </label>
+                                <label>
+                                    Horário de início<br />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="time"
+                                        onChange={(event) => { setHoraInicio(event.target.value) }}
+                                    />
+                                    <br />
+                                </label>
+                                <label>
+                                    Horário de fim<br />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="time"
+                                        onChange={(event) => { setHoraFim(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
                                 <label className={Styles.labelAndInput}>
                                     Local do evento<br />
-                                    <input className={Styles.inputMedium} type="text" />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                        onChange={(event) => { setLocal(event.target.value) }}
+                                    />
                                     <br />
                                 </label>
                             </div>
@@ -112,8 +194,8 @@ export default function CreateEventPage() {
                             </div>
 
                             <div className={Styles.sendSection}>
-                                <div>
-                                    <input className={Styles.sendButton} name="sendCreationInfo" type="submit" value="Enviar" />
+                                <div className={Styles.sendButton}>
+                                    <button onClick={createEvent}><Link href="/">Enviar</Link></button>
                                 </div>
                                 <div>
                                     <img src="./images/trioMinions.png" alt="três minions" />
