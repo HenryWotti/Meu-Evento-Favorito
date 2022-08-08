@@ -45,10 +45,13 @@ export default function IndexPage() {
             return (
               <>
                 <div className={Styles.eventDisplay}>
-                  <p>{event.nomeEvento}</p>
-                  <p>Data Início: {event.dataInicio}</p>
-                  <p>Horário: {event.horaInicio}</p>
-                  <p>Local: {event.local}</p>
+                  <p className={Styles.eventTitle}>{event.nomeEvento}</p>
+                  
+                  <p><span>Descrição: </span> {event.descricaoEvento}</p>
+                  
+                  <p><span>Data de Início: </span> {event.dataInicio}</p>
+                  <p><span>Horário: </span>{event.horaInicio}</p>
+                  <p><span>Local: </span>{event.local}</p>
                 </div>
               </>
             );
