@@ -18,7 +18,6 @@ export default function CreateEventPage() {
     const [horaInicio, setHoraInicio] = useState("");
     const [horaFim, setHoraFim] = useState("");
     const [local, setLocal] = useState("");
-    //const [foto, setFoto] = useState("");
 
     const eventsCollectionRef = collection(db, "events");
 
@@ -36,6 +35,7 @@ export default function CreateEventPage() {
             horaInicio: horaInicio,
             horaFim: horaFim,
             local: local,
+            convidadoEspecial: ""
         })
     };
 
@@ -185,17 +185,11 @@ export default function CreateEventPage() {
                                 </label>
                             </div>
 
-                            <div className={Styles.loadImage}>
-                                <img src="./images/uparArquivo.svg" alt="carregar arquivo ícone" />
-                                <label className={Styles.labelAndInput}>
-                                    Carregar foto do evento <br />
-                                    <input type="file" />
-                                </label>
-                            </div>
-
                             <div className={Styles.sendSection}>
                                 <div className={Styles.sendButton}>
-                                    <button onClick={createEvent}><Link href="/">Enviar</Link></button>
+                                    <Link href="/">
+                                        <button onClick={createEvent}>Enviar</button>
+                                    </Link>
                                 </div>
                                 <div>
                                     <img src="./images/trioMinions.png" alt="três minions" />

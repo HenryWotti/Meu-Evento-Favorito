@@ -2,7 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { db } from "../firebase-config";
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore'
+import EditEventPage from "./"
 
 import Styles from "../styles/home.module.scss";
 
@@ -20,6 +21,32 @@ export default function IndexPage() {
 
     getEvents();
   }, []);
+
+  /*const updateEvent = async (
+    id,
+    nomeEvento,
+    descricaoEvento,
+    qtdMaxPessoas,
+    publicoAlvo,
+    idadeMin,
+    dataInicio,
+    dataFim,
+    horaInicio,
+    horaFim,
+    local) => {
+
+  };*/
+
+  const deleteEvent = async (id) => {
+    const userDoc = doc(db, "events", id);
+    await deleteDoc(userDoc)
+    location.reload();
+  };
+
+  const handleEventFinished = async (color) => {
+    const btn = document.getElementById('btn');
+    btn.style.background = color
+  };
 
   return (
     <>
@@ -46,12 +73,19 @@ export default function IndexPage() {
               <>
                 <div className={Styles.eventDisplay}>
                   <p className={Styles.eventTitle}>{event.nomeEvento}</p>
-                  
+
                   <p><span>Descrição: </span> {event.descricaoEvento}</p>
-                  
+
                   <p><span>Data de Início: </span> {event.dataInicio}</p>
                   <p><span>Horário: </span>{event.horaInicio}</p>
                   <p><span>Local: </span>{event.local}</p>
+                  <p><span>Público alvo: </span>{event.publicoAlvo}</p>
+                  <p><span>Idade Mínima: </span>{event.idadeMin}</p>
+                  <br />
+
+                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
+
+
                 </div>
               </>
             );

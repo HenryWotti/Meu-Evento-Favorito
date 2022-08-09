@@ -1,8 +1,26 @@
 import Head from "next/head";
-
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { db } from "../firebase-config";
 import Styles from "../styles/event.module.scss";
+import { collection, getDocs } from 'firebase/firestore'
 
 export default function EditEventPage() {
+    const [events, setEvents] = useState([]);
+
+    const eventsCollectionRef = collection(db, "events");
+
+    useEffect(() => {
+        const getEvents = async () => {
+            const data = await getDocs(eventsCollectionRef)
+            setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        }
+
+        getEvents();
+    }, []);
+
+
+
     return (
         <>
             <Head>
@@ -13,8 +31,10 @@ export default function EditEventPage() {
                 <section className={Styles.initialSection}>
 
                     <section className={Styles.sectionTitle}>
-                        <a href="/" rel="noopener noreferrer">
-                            <img src="./images/goBack.svg" alt="voltar" />
+                        <a>
+                            <Link href='/'>
+                                <img src="./images/goBack.svg" alt="voltar" />
+                            </Link>
                         </a>
                         <h1 >EDIÇÃO DE EVENTO</h1>
                     </section>
@@ -36,68 +56,78 @@ export default function EditEventPage() {
                                 </label>
                                 <label>
                                     Descrição do evento<br />
-                                    <input className={Styles.inputLarge} type="text" />
+                                    <textarea className={Styles.inputLarge}></textarea>
                                     <br />
                                 </label>
                                 <label>
                                     Quantidade máxima de pessoas<br />
                                     <input className={Styles.inputSmall} type="number" />
+                                    <br />
                                 </label>
-                                <div className={Styles.checkboxes}>
-                                    <legend>Público-alvo<br /></legend>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Homens
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Mulheres
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="publicoalvo" />
-                                            Crianças
-                                        </label>
-                                    </div>
-                                </div>
+                                <label>
+                                    Público Alvo<br />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                    />
+                                    <br />
+                                </label>
 
-                                <label className={Styles.labelAndInput}>
+                                <label>
                                     Idade mínima requerida<br />
-                                    <input className={Styles.inputSmall} type="number" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="number"
+                                    />
                                     <br />
                                 </label>
-                                <label className={Styles.labelAndInput}>
+                                <label>
                                     Início do evento<br />
-                                    <input className={Styles.inputSmall} type="datetime-local" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="date"
+                                    />
                                     <br />
                                 </label>
-                                <label className={Styles.labelAndInput}>
+                                <label>
                                     Fim do evento <br />
-                                    <input className={Styles.inputSmall} type="datetime-local" />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="date"
+                                    />
+                                    <br />
+                                </label>
+                                <label>
+                                    Horário de início<br />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="time"
+                                    />
+                                    <br />
+                                </label>
+                                <label>
+                                    Horário de fim<br />
+                                    <input
+                                        className={Styles.inputSmall}
+                                        type="time"
+                                    />
                                     <br />
                                 </label>
                                 <label className={Styles.labelAndInput}>
                                     Local do evento<br />
-                                    <input className={Styles.inputMedium} type="text" />
+                                    <input
+                                        className={Styles.inputMedium}
+                                        type="text"
+                                    />
                                     <br />
                                 </label>
                             </div>
 
-                            <div className={Styles.loadImage}>
-                                <img src="./images/uparArquivo.svg" alt="carregar arquivo ícone" />
-                                <label className={Styles.labelAndInput}>
-                                    Editar foto do evento <br />
-                                    <input type="file" />
-                                </label>
-                            </div>
-
                             <div className={Styles.sendSection}>
-                                <div>
-                                    <input className={Styles.sendButton} type="submit" value="Salvar" />
+                                <div className={Styles.sendButton}>
+                                    <Link href="/">
+                                        <button>Salvar</button>
+                                    </Link>
                                 </div>
                                 <div>
                                     <img src="./images/trioMinions.png" alt="três minions" />
