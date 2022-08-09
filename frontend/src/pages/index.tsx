@@ -84,7 +84,7 @@ export default function IndexPage() {
                   <br />
 
                   <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
-
+                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Cadastrar </button>
 
                 </div>
               </>
