@@ -99,6 +99,11 @@ export default function IndexPage() {
                   <Link href="./eventDeleted">
                     <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
                   </Link>
+                  <label className={Styles.checkAsDone}>
+                    <input type="checkbox" ></input>
+                    <p>Evento concluído</p>
+                  </label>
+                  
                   <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}> Cadastrar </button>
                   
                 </div>
