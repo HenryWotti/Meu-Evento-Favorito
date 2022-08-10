@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import Link from "next/link";
 import Styles from "../styles/sucess.module.scss";
 
 export default function eventDeletedPage() {
@@ -17,7 +17,7 @@ export default function eventDeletedPage() {
           </div>
 
           <div className={Styles.congratulations}>
-            <p> PARABÉNS, SEU EVENTO <span>*nome do evento</span> FOI EXCLUÍDO COM SUCESSO </p>
+            <p> PARABÉNS, SEU EVENTO FOI EXCLUÍDO COM SUCESSO </p>
           </div>
 
           <div className={Styles.sadMinionImage}>
@@ -26,7 +26,9 @@ export default function eventDeletedPage() {
           </div>
 
           <div className={Styles.backToHomePage}>
-            <button type="button">VOLTAR PARA HOME PAGE</button>
+            <Link href="./">
+              <button onClick={() => { }} type="button">VOLTAR PARA HOME PAGE</button>
+            </Link>
           </div>
         </section>
 

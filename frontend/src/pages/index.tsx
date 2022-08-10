@@ -3,9 +3,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { db } from "../firebase-config";
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore'
-import EditEventPage from "./"
-
+//import EditEventPage from "./"
+import eventDeleted from "./"
 import Styles from "../styles/home.module.scss";
+
 
 export default function IndexPage() {
 
@@ -48,6 +49,8 @@ export default function IndexPage() {
     btn.style.background = color
   };
 
+  
+
   return (
     <>
       <Head>
@@ -83,9 +86,11 @@ export default function IndexPage() {
                   <p><span>Idade Mínima: </span>{event.idadeMin}</p>
                   <br />
 
-                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
-                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Cadastrar </button>
-
+                  <Link href="./eventDeleted">
+                    <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
+                  </Link>
+                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}> Cadastrar </button>
+                  
                 </div>
               </>
             );
