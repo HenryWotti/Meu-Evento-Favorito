@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-
+ { /* Armazena configurações gerais utilizados por toda a aplicação */ }
 export default class MyDocument extends Document {
     render() {
         return (

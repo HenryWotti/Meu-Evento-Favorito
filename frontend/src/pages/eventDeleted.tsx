@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Styles from "../styles/sucess.module.scss";
 
+{/* Página que indica que evento foi deletado */}
 export default function eventDeletedPage() {
   return (
     <>

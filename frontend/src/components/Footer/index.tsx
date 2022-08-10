@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 
+{ /* Footer foi criado como componente por ser usado em todas as páginas */}
 export function Footer() {
     return (
         <footer className={styles.footerContainer}>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { db } from "../firebase-config";
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore'
-//import EditEventPage from "./"
 import eventDeleted from "./"
 import Styles from "../styles/home.module.scss";
 
@@ -23,34 +22,12 @@ export default function IndexPage() {
     getEvents();
   }, []);
 
-  /*const updateEvent = async (
-    id,
-    nomeEvento,
-    descricaoEvento,
-    qtdMaxPessoas,
-    publicoAlvo,
-    idadeMin,
-    dataInicio,
-    dataFim,
-    horaInicio,
-    horaFim,
-    local) => {
-
-  };*/
-
-  const deleteEvent = async (id) => {
+  {/* Função responsável por deletar evento */}
+  const deleteEvent = async (id) => { 
     const userDoc = doc(db, "events", id);
     await deleteDoc(userDoc)
     location.reload();
   };
-
-  /*
-  const handleEventFinished = async (color) => {
-    const btn = document.getElementById('btn');
-    btn.style.background = color
-  };*/
-
-
 
   return (
     <>
@@ -97,6 +74,9 @@ export default function IndexPage() {
                     <p><span>E-mail associado: </span>{event.emailCriador}</p>
                   </div>
                   <br />
+                  {
+                    /* Quando um evento é deletado, a aplicação redireciona para a página que mostra que foi deletado */
+                  }
                   <Link href="./eventDeleted">
                     <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
                   </Link>
@@ -104,9 +84,6 @@ export default function IndexPage() {
                     <input type="checkbox" ></input>
                     <p>Evento concluído</p>
                   </label>
-
-                  {/*<button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}> Cadastrar </button>*/}
-
                 </div>
               </>
             );

@@ -21,6 +21,7 @@ export default function CreateEventPage() {
 
     const eventsCollectionRef = collection(db, "events");
 
+    {/* Função que pega dados dos inputs do formulário e envia para o banco de dados */}
     const createEvent = async () => {
         await addDoc(eventsCollectionRef, {
             nomeCriador: nomeCriador,
