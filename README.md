@@ -33,7 +33,7 @@
 
 <div id="sobre-o-projeto"> </div>
 
-## Sobre o projeto
+## ✏️ Sobre o projeto
 
 O Meu Evento Favorito é um sistema que foi pensado e desenvolvido com o intuito de auxiliar criadores de eventos com uma visualização prática de gerenciamento.
 
@@ -49,7 +49,7 @@ Algumas coisas que você pode fazer:
 
 <div id="feito-com"> </div>
 
-### Feito com
+### 🔨 Feito com
 
 Aqui estão algumas linguagens, frameworks, ferramentas e bibliotecas que usamos no desenvolvimento dessa aplicação:
 
@@ -61,7 +61,7 @@ Aqui estão algumas linguagens, frameworks, ferramentas e bibliotecas que usamos
 
 <div id="comecando"> </div>
 
-## Começando
+## 🔛 Começando
 
 Aqui estão algumas instruções sobre como configurar o projeto localmente. Para obter uma cópia local, siga os passos abaixo:
 
@@ -77,7 +77,7 @@ Se você pretende rodar esse projeto localmente, você precisa pesquisar como in
 
 <div id="instalacao"> </div>
 
-## Instalação
+## 👨‍💻 Instalação
 
 Clone o repositório
 ```sh
@@ -96,7 +96,7 @@ git clone https://github.com/HenryWotti/Meu-Evento-Favorito
 
 <div id="contribuindo"> </div>
 
-## Exemplos de uso
+## 💻 Exemplos de uso
 
 Alguns exemplos de uso da nossa aplicação são:
 * Registro de eventos com informações detalhadas.
@@ -105,7 +105,7 @@ Alguns exemplos de uso da nossa aplicação são:
 * Alteração de status dos eventos para não concluído/concluído.
 * Exclusão permanente de eventos.
 
-## Contribuindo
+## 🙌 Contribuindo
 
 Se você tem alguma sugestão que fará este app ficar melhor, por favor realize um fork e crie um Pull Request. Você pode também simplesmente abrir uma issue com a tag "enhancement" para sugestões e "error" para problemas enfrentados
 
@@ -118,14 +118,14 @@ Se você tem alguma sugestão que fará este app ficar melhor, por favor realize
 
 <div id="licenca"> </div>
 
-## Licença
+## 📋 Licença
 
 Distribuído na Licença MIT.
 
 
 <div id="contato"> </div>
 
-## Contato
+## ✉️ Contato
 
 Henrycky Wottikosky da Fonceca - henrycky_wottikosky@hotmail.com
 
@@ -135,14 +135,14 @@ Gustavo Brunoro Nahuz - gustavobrunoronahuz@gmail.com
 
 <div id="ferramentas-adicionais"> </div>
 
-## Ferramentas adicionais
+## 🔧 Ferramentas adicionais
 
 Ferramentas adicionais que recomendamos para desenvolvimento
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [WebStorm](https://www.jetbrains.com/pt-br/webstorm/)
 
-## Considerações Finais
+## 🎓 Considerações Finais
 
 <div id="consideracoes-finais"> </div>
 
