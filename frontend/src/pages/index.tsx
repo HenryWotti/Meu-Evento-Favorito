@@ -44,12 +44,13 @@ export default function IndexPage() {
     location.reload();
   };
 
+  /*
   const handleEventFinished = async (color) => {
     const btn = document.getElementById('btn');
     btn.style.background = color
-  };
+  };*/
 
-  
+
 
   return (
     <>
@@ -70,7 +71,7 @@ export default function IndexPage() {
             </Link>
           </div>
 
-
+          {/* Mostra os eventos criados na homepage */}
           {events.map((event) => {
             return (
               <>
@@ -103,9 +104,9 @@ export default function IndexPage() {
                     <input type="checkbox" ></input>
                     <p>Evento concluído</p>
                   </label>
-                  
-                  <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}> Cadastrar </button>
-                  
+
+                  {/*<button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}> Cadastrar </button>*/}
+
                 </div>
               </>
             );
