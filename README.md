@@ -97,6 +97,15 @@ git clone https://github.com/HenryWotti/Meu-Evento-Favorito
 
 <div id="contribuindo"> </div>
 
+## 📲 Exemplos de uso
+
+Alguns exemplos de uso da nossa aplicação são:
+* Registro de eventos com informações detalhadas.
+* Visualização dos eventos cadastrados.
+* Persistência dos dados referentes aos eventos cadastrados.
+* Alteração de status dos eventos para não concluído/concluído.
+* Exclusão permanente de eventos.
+
 ## 🤝 Contribuindo
 
 Se você tem alguma sugestão que fará este app ficar melhor, por favor realize um fork e crie um Pull Request. Você pode também simplesmente abrir uma issue com a tag "enhancement" para sugestões e "error" para problemas enfrentados
