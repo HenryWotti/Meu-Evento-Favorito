@@ -78,14 +78,24 @@ export default function IndexPage() {
                   <p className={Styles.eventTitle}>{event.nomeEvento}</p>
 
                   <p><span>Descrição: </span> {event.descricaoEvento}</p>
-
-                  <p><span>Data de Início: </span> {event.dataInicio}</p>
-                  <p><span>Horário: </span>{event.horaInicio}</p>
+                  <div className={Styles.duasInfoLinha}>
+                    <p><span>Data de Início: </span> {event.dataInicio}</p>
+                    <p><span>Data de Término: </span> {event.dataFim}</p>
+                  </div>
+                  <div className={Styles.duasInfoLinha}>
+                    <p><span>Horário de início: </span>{event.horaInicio}</p>
+                    <p><span>Horário de fim: </span>{event.horaFim}</p>
+                  </div>
                   <p><span>Local: </span>{event.local}</p>
                   <p><span>Público alvo: </span>{event.publicoAlvo}</p>
                   <p><span>Idade Mínima: </span>{event.idadeMin}</p>
                   <br />
 
+                  <div className={Styles.detailsOwner}>
+                    <p><span>Responsável pelo evento: </span>{event.nomeCriador}</p>
+                    <p><span>E-mail associado: </span>{event.emailCriador}</p>
+                  </div>
+                  <br />
                   <Link href="./eventDeleted">
                     <button onClick={() => { deleteEvent(event.id) }} className={Styles.eventButtons}>Excluir evento</button>
                   </Link>
