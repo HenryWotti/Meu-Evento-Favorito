@@ -27,6 +27,7 @@
     <li><a href="#licenca">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#ferramentas-adicionais">Ferramentas adicionais</a></li>
+    <li><a href="#ferramentas-adicionais">Considerações Finais</a></li>
   </ol>
 
 
@@ -143,7 +144,11 @@ Ferramentas adicionais que recomendamos para desenvolvimento
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [WebStorm](https://www.jetbrains.com/pt-br/webstorm/)
 
-## Processo de desenvolvimento
+## Considerações Finais
+<div style="text-align:justify">
 Durante a codificação do projeto, desenvolvemos habilidade com o Next.JS e trabalhamos para implementar funcionalidades da ideia inicial. À medida que o trabalho evoluia, enfrentamos dificuldades, e uma funcionalidade que gostaríamos de ter implementado, que foi a edição de um evento pelo usuário que o cadastrou não foi concluída, uma vez que não conseguimos manipular objetos criados em diferentes páginas por usuários específicos dentro do prazo. Outro contratempo foi a integração do backend (NodeJs) com a aplicação, assim foi decidido usar a API do google "Firebase - firestore storage" para guardamos os dados não somente de forma local, mas em um banco de dados. Ao final, produzimos as funcionalidades e documentamos o projeto.
+<br/>
+</div>
+
 
 <p align="right">(<a href="#top">Voltar ao topo</a>)</p>
